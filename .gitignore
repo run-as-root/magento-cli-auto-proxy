@@ -2,3 +2,4 @@
 .env
 .editorconfig
 vendor/
+composer.lock

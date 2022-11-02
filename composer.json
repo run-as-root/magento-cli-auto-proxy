@@ -8,6 +8,13 @@
   "require-dev": {
     "roave/security-advisories": "dev-latest"
   },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://mirror.mage-os.org/",
+      "only": ["magento/*"]
+    }
+  ],
   "autoload": {
     "psr-4": {
       "RunAsRoot\\CliConstructorArgAutoProxy\\": "lib"
@@ -20,5 +27,10 @@
         "app/etc/cli_arg_auto_proxy_di.xml"
       ]
     ]
+  },
+  "config": {
+    "allow-plugins": {
+      "magento/composer-dependency-version-audit-plugin": false
+    }
   }
 }
