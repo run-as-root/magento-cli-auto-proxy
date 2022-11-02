@@ -61,6 +61,10 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-_Vlad Podorozhnyi_  
+[_Vlad Podorozhnyi_](https://github.com/vpodorozh)  
 Twitter: [![@vpodorozh](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2Fvpodorozh)](https://twitter.com/vpodorozh)  
-Email: `vpodorozh@gmail.com` | `vlad.podorozhnyi@run-as-root.sh`
+Email: `vpodorozh@gmail.com` | `vlad.podorozhnyi@run-as-root.sh`  
+<br>
+[_run_as_root GmbH_](https://github.com/run-as-root) <img src="https://avatars.githubusercontent.com/u/42740374?s=200&v=4"  width="50" height="50"/>   
+Twitter: [![@run_as_root](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2Frun_as_root)](https://twitter.com/run_as_root)  
+Email: `info@run-as-root.sh`  
