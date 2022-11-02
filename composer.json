@@ -1,5 +1,5 @@
 {
-  "name": "vpodorozh/magento-cli-auto-proxy",
+  "name": "run_as_root/magento-cli-auto-proxy",
   "description": "Makes all Magento CLI commands construct dependencies be injected as Proxy.",
   "type": "magento2-component",
   "require": {
@@ -10,7 +10,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Vpodorozh\\CliConstructorArgAutoProxy\\": "lib"
+      "RunAsRoot\\CliConstructorArgAutoProxy\\": "lib"
     }
   },
   "extra": {

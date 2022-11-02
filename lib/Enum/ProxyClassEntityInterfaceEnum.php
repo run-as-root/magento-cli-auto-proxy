@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Vpodorozh\CliConstructorArgAutoProxy\Enum;
+namespace RunAsRoot\CliConstructorArgAutoProxy\Enum;
 
 interface ProxyClassEntityInterfaceEnum
 {

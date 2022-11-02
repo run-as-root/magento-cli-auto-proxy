@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace Vpodorozh\CliConstructorArgAutoProxy\Plugin\Dom;
+namespace RunAsRoot\CliConstructorArgAutoProxy\Plugin\Dom;
 
 use Psr\Log\LoggerInterface;
 use ReflectionException;
-use Vpodorozh\CliConstructorArgAutoProxy\Service\EnrichCliConfigWithProxyService;
+use RunAsRoot\CliConstructorArgAutoProxy\Service\EnrichCliConfigWithProxyService;
 
 class EnrichCliConfigWithProxyPlugin
 {

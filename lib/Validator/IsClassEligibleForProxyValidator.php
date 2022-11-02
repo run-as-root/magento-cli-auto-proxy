@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace Vpodorozh\CliConstructorArgAutoProxy\Validator;
+namespace RunAsRoot\CliConstructorArgAutoProxy\Validator;
 
-use Vpodorozh\CliConstructorArgAutoProxy\Enum\ProxyClassEntityInterfaceEnum;
-use Vpodorozh\CliConstructorArgAutoProxy\Exception\ClassIsNotEligibleForProxyException;
+use RunAsRoot\CliConstructorArgAutoProxy\Enum\ProxyClassEntityInterfaceEnum;
+use RunAsRoot\CliConstructorArgAutoProxy\Exception\ClassIsNotEligibleForProxyException;
 
 class IsClassEligibleForProxyValidator
 {

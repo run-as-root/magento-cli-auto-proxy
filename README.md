@@ -34,7 +34,7 @@
 ### Installation
 
 ```bash
-composer req vpodorozh/magento-cli-auto-proxy:*
+composer req run_as_root/magento-cli-auto-proxy:*
 ```
 
 ## Roadmap

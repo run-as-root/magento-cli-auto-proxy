@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Vpodorozh\CliConstructorArgAutoProxy\Mapper;
+namespace RunAsRoot\CliConstructorArgAutoProxy\Mapper;
 
 class ProxiedConstructArgsToDiConfigMapper
 {

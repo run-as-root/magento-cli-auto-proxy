@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace Vpodorozh\CliConstructorArgAutoProxy\Preference\Framework\ObjectManager\Config\Reader\Dom;
+namespace RunAsRoot\CliConstructorArgAutoProxy\Preference\Framework\ObjectManager\Config\Reader\Dom;
 
 use Magento\Framework\App\ObjectManager;
 use Magento\Framework\ObjectManager\Config\Reader\Dom as OriginDom;
-use Vpodorozh\CliConstructorArgAutoProxy\Plugin\Dom\EnrichCliConfigWithProxyPlugin;
+use RunAsRoot\CliConstructorArgAutoProxy\Plugin\Dom\EnrichCliConfigWithProxyPlugin;
 
 class Interceptor extends OriginDom
 {

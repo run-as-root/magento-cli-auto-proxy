@@ -1,12 +1,12 @@
 <?php
 declare(strict_types=1);
 
-namespace Vpodorozh\CliConstructorArgAutoProxy\Service;
+namespace RunAsRoot\CliConstructorArgAutoProxy\Service;
 
 use Magento\Framework\Code\Reader\ClassReaderInterface;
 use Magento\Framework\Console\CommandListInterface;
 use ReflectionException;
-use Vpodorozh\CliConstructorArgAutoProxy\Mapper\ProxiedConstructArgsToDiConfigMapper;
+use RunAsRoot\CliConstructorArgAutoProxy\Mapper\ProxiedConstructArgsToDiConfigMapper;
 
 class EnrichCliConfigWithProxyService
 {

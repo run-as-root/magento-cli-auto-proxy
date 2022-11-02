@@ -23,11 +23,11 @@ Entry point of functionality is based on DI config reader that is used in both c
 
 ### Plugins
 
-#### `\Vpodorozh\CliConstructorArgAutoProxy\Plugin\Dom\EnrichCliConfigWithProxyPlugin`
+#### `\RunAsRoot\CliConstructorArgAutoProxy\Plugin\Dom\EnrichCliConfigWithProxyPlugin`
 * responsible for enriching DI config with Proxies for CLI command constructor arguments;
 * executed after DI config reading;
 * plugin is executed in not trivial way - via preference on DOM config reader of DI (see section bellow for more details) 
-* Caller class: `\Vpodorozh\CliConstructorArgAutoProxy\Preference\Framework\ObjectManager\Config\Reader\Dom\Interceptor`
+* Caller class: `\RunAsRoot\CliConstructorArgAutoProxy\Preference\Framework\ObjectManager\Config\Reader\Dom\Interceptor`
 
 ### Preferences
 
@@ -36,7 +36,7 @@ Entry point of functionality is based on DI config reader that is used in both c
 | Magento\Framework\ObjectManager\Config\Reader\Dom  | ...\Preference\Framework\ObjectManager\Config\Reader\Dom\Interceptor  |
 
 
-#### `\Vpodorozh\CliConstructorArgAutoProxy\Preference\Framework\ObjectManager\Config\Reader\Dom\Interceptor`
+#### `\RunAsRoot\CliConstructorArgAutoProxy\Preference\Framework\ObjectManager\Config\Reader\Dom\Interceptor`
 Workaround for plugin execution.  
 This override has the same purpose as regular Magento 2 Interceptors - hook for calling plugins.  
 It is not possible to define plugin over DOM config reader, as it is created before Magento plugin functionality starts. 
@@ -44,19 +44,19 @@ Preference is the only way to hook in.
 
 ### Services
 
-#### `\Vpodorozh\CliConstructorArgAutoProxy\Service\EnrichCliConfigWithProxyService`
+#### `\RunAsRoot\CliConstructorArgAutoProxy\Service\EnrichCliConfigWithProxyService`
 Enrich provided DI config with proxies for CLI class commands only.
 
-#### `\Vpodorozh\CliConstructorArgAutoProxy\Service\GetProxiedConstructArgsConfigService`
+#### `\RunAsRoot\CliConstructorArgAutoProxy\Service\GetProxiedConstructArgsConfigService`
 Receives CLI command constructor arguments types and reformat them to Proxy types.  
 Using `IsClassEligibleForProxyValidator` to determine is class eligible to be Proxied.
 
 ### Validator
 
-#### `\Vpodorozh\CliConstructorArgAutoProxy\Validator\IsClassEligibleForProxyValidator`
+#### `\RunAsRoot\CliConstructorArgAutoProxy\Validator\IsClassEligibleForProxyValidator`
 Check is Proxy applicable for this specific class.  
 
 ### Mapper
 
-#### `\Vpodorozh\CliConstructorArgAutoProxy\Mapper\ProxiedConstructArgsToDiConfigMapper`
+#### `\RunAsRoot\CliConstructorArgAutoProxy\Mapper\ProxiedConstructArgsToDiConfigMapper`
 Adds Proxy DI configs for specific CLI class command to DI configs pool.

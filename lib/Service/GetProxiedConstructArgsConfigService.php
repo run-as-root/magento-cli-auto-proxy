@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace Vpodorozh\CliConstructorArgAutoProxy\Service;
+namespace RunAsRoot\CliConstructorArgAutoProxy\Service;
 
-use Vpodorozh\CliConstructorArgAutoProxy\Enum\ProxyClassEntityInterfaceEnum;
-use Vpodorozh\CliConstructorArgAutoProxy\Validator\IsClassEligibleForProxyValidator;
+use RunAsRoot\CliConstructorArgAutoProxy\Enum\ProxyClassEntityInterfaceEnum;
+use RunAsRoot\CliConstructorArgAutoProxy\Validator\IsClassEligibleForProxyValidator;
 
 class GetProxiedConstructArgsConfigService
 {
