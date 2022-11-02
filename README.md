@@ -1,10 +1,3 @@
----
-title: Magento CLI Constructor Arg Auto Proxy  
-keywords: Magento, CLI, Proxy, ObjectManager  
-author: Vlad Podorozhnyi  
-send_questions_to: vpodorozh@gmail.com | vlad.podorozhnyi@run-as-root.sh  
-category: System
----
 ![Magento 2](https://img.shields.io/badge/Magento-2.4.*-orange)
 ![PHP](https://img.shields.io/badge/php-7.4-blue)
 ![composer](https://shields.io/badge/composer-v2-darkgreen)
