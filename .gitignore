@@ -1,4 +1,5 @@
 .idea
 .env
 .editorconfig
-
+vendor/
+composer.lock
