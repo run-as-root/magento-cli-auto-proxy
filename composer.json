@@ -3,16 +3,21 @@
   "description": "Makes all Magento CLI commands construct dependencies be injected as Proxy.",
   "type": "magento2-component",
   "require": {
+    "php": "^7.4 | ^8",
     "magento/framework": "*"
   },
   "require-dev": {
-    "roave/security-advisories": "dev-latest"
+    "roave/security-advisories": "dev-latest",
+    "squizlabs/php_codesniffer": "^3.7",
+    "phpcompatibility/php-compatibility": "^9.3"
   },
   "repositories": [
     {
       "type": "composer",
       "url": "https://mirror.mage-os.org/",
-      "only": ["magento/*"]
+      "only": [
+        "magento/*"
+      ]
     }
   ],
   "autoload": {
@@ -32,5 +37,10 @@
     "allow-plugins": {
       "magento/composer-dependency-version-audit-plugin": false
     }
+  },
+  "scripts": {
+    "sniffer:php7.4": "phpcs -p ./lib --standard=vendor/phpcompatibility/php-compatibility/PHPCompatibility --runtime-set testVersion 7.4",
+    "sniffer:php8.0": "phpcs -p ./lib --standard=vendor/phpcompatibility/php-compatibility/PHPCompatibility --runtime-set testVersion 8.0",
+    "sniffer:php8.1": "phpcs -p ./lib --standard=vendor/phpcompatibility/php-compatibility/PHPCompatibility --runtime-set testVersion 8.1"
   }
 }
