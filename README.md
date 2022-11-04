@@ -4,6 +4,7 @@
 ![PHP](https://img.shields.io/badge/php-8.1-blue)
 ![composer](https://shields.io/badge/composer-v2-darkgreen)
 ![packagist](https://img.shields.io/badge/packagist-f28d1a)
+![build](https://github.com/run-as-root/magento-cli-auto-proxy/actions/workflows/php.yml/badge.svg)
 
 <br />
 <div align="center">
