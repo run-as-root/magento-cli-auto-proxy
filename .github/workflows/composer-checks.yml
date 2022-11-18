@@ -1,4 +1,4 @@
-name: PHP composer & PHP 7.4, 8.0, 8.1 Compatibility
+name: Composer checks
 
 on:
   push:
@@ -28,15 +28,3 @@ jobs:
         key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
         restore-keys: |
           ${{ runner.os }}-php-
-
-    - name: Install dependencies
-      run: composer install --prefer-dist --no-progress
-
-    - name: PHP 7.4 compatibility
-      run: composer sniffer:php7.4
-
-    - name: PHP 8.0 compatibility
-      run: composer sniffer:php8.0
-
-    - name: PHP 8.1 compatibility
-      run: composer sniffer:php8.1
