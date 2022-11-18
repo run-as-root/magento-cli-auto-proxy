@@ -42,6 +42,8 @@ class EnrichCliConfigWithProxyServiceTest extends TestCase
 
     public function testExecuteWithCliCommands(): void
     {
+        $this->assertTrue(false);
+
         $diConfig = [
             'some' => 'config',
             'Magento\Framework\Console\CommandListInterface' => [
