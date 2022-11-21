@@ -1,4 +1,4 @@
-name: PHP Unit
+name: Tests coverage
 
 on:
   push:
@@ -29,5 +29,8 @@ jobs:
     - name: Install dependencies
       run: composer install --prefer-dist --no-progress
 
-    - name: PHP Unit
-      run: composer phpunit
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: phpunit-coverage-badge
+      uses: timkrase/phpunit-coverage-badge@v1.2.0
