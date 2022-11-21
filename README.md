@@ -45,7 +45,7 @@ composer req run_as_root/magento-cli-auto-proxy:^1
 - [x] MVP release
 - [x] Documentation
 - [x] PHP 8 support (most likely supported already :suspect: )
-- [ ] Unit tests coverage
+- [x] Unit tests coverage
 - [ ] Static tests coverage
   - [ ] php linting
   - [ ] phpcs
