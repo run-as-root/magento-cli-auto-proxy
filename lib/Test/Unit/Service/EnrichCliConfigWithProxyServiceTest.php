@@ -4,15 +4,16 @@ declare(strict_types=1);
 namespace RunAsRoot\CliConstructorArgAutoProxy\Test\Unit;
 
 use Magento\Framework\Code\Reader\ClassReaderInterface;
+use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 use RunAsRoot\CliConstructorArgAutoProxy\Mapper\ProxiedConstructArgsToDiConfigMapper;
 use RunAsRoot\CliConstructorArgAutoProxy\Service\EnrichCliConfigWithProxyService;
 use RunAsRoot\CliConstructorArgAutoProxy\Service\GetProxiedConstructArgsConfigService;
 
 /**
- * Powered by Github Copilot
+ * Powered by GitHub Copilot
  */
-class EnrichCliConfigWithProxyServiceTest extends TestCase
+final class EnrichCliConfigWithProxyServiceTest extends TestCase
 {
     private ClassReaderInterface $classReader;
     private GetProxiedConstructArgsConfigService $argsConfigService;
@@ -31,7 +32,7 @@ class EnrichCliConfigWithProxyServiceTest extends TestCase
         );
     }
 
-    public function testExecute(): void
+    public function test_execute(): void
     {
         $diConfig = [
             'some' => 'config',
@@ -40,7 +41,7 @@ class EnrichCliConfigWithProxyServiceTest extends TestCase
         $this->assertEquals($diConfig, $this->sut->execute($diConfig));
     }
 
-    public function testExecuteWithCliCommands(): void
+    public function test_execute_with_cli_commands(): void
     {
         $diConfig = [
             'some' => 'config',
@@ -73,7 +74,7 @@ class EnrichCliConfigWithProxyServiceTest extends TestCase
         $this->assertEquals($diConfig, $this->sut->execute($diConfig));
     }
 
-    public function testExecuteWithCliCommandsAndNoConstruct(): void
+    public function test_execute_with_cli_commands_and_no_construct(): void
     {
         $diConfig = [
             'some' => 'config',
@@ -102,7 +103,7 @@ class EnrichCliConfigWithProxyServiceTest extends TestCase
         $this->assertEquals($diConfig, $this->sut->execute($diConfig));
     }
 
-    public function testExecuteWithCliCommandsAndNoInstance(): void
+    public function test_execute_with_cli_commands_and_no_instance(): void
     {
         $diConfig = [
             'some' => 'config',
@@ -129,7 +130,7 @@ class EnrichCliConfigWithProxyServiceTest extends TestCase
         $this->assertEquals($diConfig, $this->sut->execute($diConfig));
     }
 
-    public function testExecuteWithCliCommandsAndNoCommands(): void
+    public function test_execute_with_cli_commands_and_no_commands(): void
     {
         $diConfig = [
             'some' => 'config',
@@ -152,7 +153,7 @@ class EnrichCliConfigWithProxyServiceTest extends TestCase
         $this->assertEquals($diConfig, $this->sut->execute($diConfig));
     }
 
-    public function testExecuteWithCliCommandsAndNoArguments(): void
+    public function test_execute_with_cli_commands_and_no_arguments(): void
     {
         $diConfig = [
             'some' => 'config',
@@ -173,7 +174,7 @@ class EnrichCliConfigWithProxyServiceTest extends TestCase
         $this->assertEquals($diConfig, $this->sut->execute($diConfig));
     }
 
-    public function testExecuteWithCliCommandsAndNoCommandListInterface(): void
+    public function test_execute_with_cli_commands_and_no_command_list_interface(): void
     {
         $diConfig = [
             'some' => 'config',
@@ -191,7 +192,7 @@ class EnrichCliConfigWithProxyServiceTest extends TestCase
         $this->assertEquals($diConfig, $this->sut->execute($diConfig));
     }
 
-    public function testExecuteWithCliCommandsAndNoArgumentsKey(): void
+    public function test_execute_with_cli_commands_and_no_arguments_key(): void
     {
         $diConfig = [
             'some' => 'config',
@@ -212,7 +213,7 @@ class EnrichCliConfigWithProxyServiceTest extends TestCase
         $this->assertEquals($diConfig, $this->sut->execute($diConfig));
     }
 
-    public function testExecuteWithCliCommandsAndNoCommandsKey(): void
+    public function test_execute_with_cli_commands_and_no_commands_key(): void
     {
         $diConfig = [
             'some' => 'config',
@@ -235,7 +236,7 @@ class EnrichCliConfigWithProxyServiceTest extends TestCase
         $this->assertEquals($diConfig, $this->sut->execute($diConfig));
     }
 
-    public function testExecuteWithCliCommandsAndNoInstanceKey(): void
+    public function test_execute_with_cli_commands_and_no_instance_key(): void
     {
         $diConfig = [
             'some' => 'config',

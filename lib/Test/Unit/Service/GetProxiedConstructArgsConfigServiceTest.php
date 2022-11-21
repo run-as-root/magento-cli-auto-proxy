@@ -9,9 +9,9 @@ use RunAsRoot\CliConstructorArgAutoProxy\Service\GetProxiedConstructArgsConfigSe
 use RunAsRoot\CliConstructorArgAutoProxy\Validator\IsClassEligibleForProxyValidator;
 
 /**
- * Powered by Github Copilot
+ * Powered by GitHub Copilot
  */
-class GetProxiedConstructArgsConfigServiceTest extends TestCase
+final class GetProxiedConstructArgsConfigServiceTest extends TestCase
 {
     private IsClassEligibleForProxyValidator $proxyValidator;
     private GetProxiedConstructArgsConfigService $sut;
@@ -22,7 +22,7 @@ class GetProxiedConstructArgsConfigServiceTest extends TestCase
         $this->sut = new GetProxiedConstructArgsConfigService($this->proxyValidator);
     }
 
-    public function testGet(): void
+    public function test_get(): void
     {
         $constructConfig = [
             ['some', 'Some\Class'],
@@ -47,7 +47,7 @@ class GetProxiedConstructArgsConfigServiceTest extends TestCase
         );
     }
 
-    public function testGetWithNoEligibleClasses(): void
+    public function test_get_with_no_eligible_classes(): void
     {
         $constructConfig = [
             ['some', 'Some\Class'],
