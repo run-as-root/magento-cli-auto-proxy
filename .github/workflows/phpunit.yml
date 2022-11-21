@@ -26,5 +26,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-php-
 
+      - name: Install dependencies
+        run: composer install --prefer-dist --no-progress
+
+      - name: Xdebug Action
+        uses: MilesChou/docker-xdebug@v1.1.0
+
       - name: PHP Unit
         run: composer phpunit
