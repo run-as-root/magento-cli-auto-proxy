@@ -32,5 +32,8 @@ jobs:
     - name: PHP Unit
       run: composer phpunit
 
+    - name: Checkout code
+      uses: actions/checkout@v2
+
     - name: phpunit-coverage-badge
       uses: timkrase/phpunit-coverage-badge@v1.2.0
