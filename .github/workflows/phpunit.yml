@@ -29,12 +29,12 @@ jobs:
     - name: Install dependencies
       run: composer install --prefer-dist --no-progress
 
-    - name: PHP Unit
-      run: composer phpunit
+    - name: Code Climate Setup
+      run: |
+        curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter && chmod +x ./cc-test-reporter
+        ./cc-test-reporter before-build
 
-    - name: Generate test coverage badge
-      uses: timkrase/phpunit-coverage-badge@v1.2.0
-      with:
-        coverage_badge_path: 'badge-coverage.svg'
-        push_badge: true
-        repo_token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Run Tests
+      run: |
+        php vendor/bin/phpunit --coverage-clover clover.xml --configuration phpunit.xml tests/Unit
+        ./cc-test-reporter after-build -t clover --exit-code $?
