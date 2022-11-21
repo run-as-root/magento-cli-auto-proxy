@@ -46,6 +46,6 @@
     "sniffer:php8.0": "phpcs -p ./lib --standard=vendor/phpcompatibility/php-compatibility/PHPCompatibility --runtime-set testVersion 8.0",
     "sniffer:php8.1": "phpcs -p ./lib --standard=vendor/phpcompatibility/php-compatibility/PHPCompatibility --runtime-set testVersion 8.1",
     "phpstan": "phpstan",
-    "phpunit": "vendor/bin/phpunit -c phpunit.xml --coverage-clover clover.xml"
+    "phpunit": "vendor/bin/phpunit -c phpunit.xml"
   }
 }
