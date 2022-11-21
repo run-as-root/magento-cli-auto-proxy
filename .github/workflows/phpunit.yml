@@ -31,3 +31,6 @@ jobs:
 
     - name: PHP Unit
       run: composer phpunit
+
+    - name: phpunit-coverage-badge
+      uses: timkrase/phpunit-coverage-badge@v1.2.0
