@@ -42,3 +42,4 @@ jobs:
         uses: timkrase/phpunit-coverage-badge@v1.2.0
         with:
           push_badge: true
+          commit_message: "Update coverage badge"
