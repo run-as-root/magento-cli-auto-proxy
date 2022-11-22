@@ -27,11 +27,7 @@ jobs:
     needs: validate-composer
 
     steps:
-      - uses: actions/checkout@v3
-
-      - uses: run-as-root/magento-cli-auto-proxy/.github/actions/composer-cache/
-        with:
-          runner-os:  ${{ runner.os }}
+      - uses: ./.github/actions/composer-cache
 
       - name: Install dependencies
         run: composer install --prefer-dist --no-progress
@@ -42,9 +38,7 @@ jobs:
     needs: build
 
     steps:
-      - uses: actions/checkout@v3
-
-      - uses: run-as-root/magento-cli-auto-proxy/.github/actions/composer-cache/
+      - uses: ./.github/actions/composer-cache
         with:
           runner-os: ${{ runner.os }}
 
@@ -63,11 +57,7 @@ jobs:
     needs: build
 
     steps:
-      - uses: actions/checkout@v3
-
-      - uses: run-as-root/magento-cli-auto-proxy/.github/actions/composer-cache/
-        with:
-          runner-os: ${{ runner.os }}
+      - uses: ./.github/actions/composer-cache
 
       - name: phpstan
         run: composer phpstan
@@ -78,11 +68,7 @@ jobs:
     needs: build
 
     steps:
-      - uses: actions/checkout@v3
-
-      - uses: run-as-root/magento-cli-auto-proxy/.github/actions/composer-cache/
-        with:
-          runner-os: ${{ runner.os }}
+      - uses: ./.github/actions/composer-cache
 
       - name: Setup PHP with Xdebug
         uses: shivammathur/setup-php@v2
