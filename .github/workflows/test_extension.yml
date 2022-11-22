@@ -27,6 +27,7 @@ jobs:
     needs: validate-composer
 
     steps:
+      - uses: actions/checkout@v3
       - uses: ./.github/actions/composer-cache
 
       - name: Install dependencies
@@ -38,6 +39,7 @@ jobs:
     needs: build
 
     steps:
+      - uses: actions/checkout@v3
       - uses: ./.github/actions/composer-cache
         with:
           runner-os: ${{ runner.os }}
@@ -50,38 +52,3 @@ jobs:
 
       - name: PHP 8.1 compatibility
         run: composer sniffer:php8.1
-
-  Static-tests:
-    runs-on: ubuntu-latest
-
-    needs: build
-
-    steps:
-      - uses: ./.github/actions/composer-cache
-
-      - name: phpstan
-        run: composer phpstan
-
-  PHP-Unit:
-    runs-on: ubuntu-latest
-
-    needs: build
-
-    steps:
-      - uses: ./.github/actions/composer-cache
-
-      - name: Setup PHP with Xdebug
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: '8.1'
-          coverage: xdebug
-
-      - name: PHP Unit
-        run: composer phpunit
-
-      - name: phpunit-coverage-badge
-        uses: timkrase/phpunit-coverage-badge@v1.2.0
-        with:
-          push_badge: true
-          commit_message: "Update coverage badge"
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
