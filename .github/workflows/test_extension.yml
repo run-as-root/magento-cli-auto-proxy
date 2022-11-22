@@ -16,7 +16,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - uses: magento-cli-auto-proxy/magento-cli-auto-proxy/.github/actions/composer-cache/@feature/actions-optimization
+      - uses: run_as_root/magento-cli-auto-proxy/.github/actions/composer-cache/@feature/actions-optimization
         with:
           path: vendor
           key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
