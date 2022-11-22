@@ -28,7 +28,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - uses: run-as-root/magento-cli-auto-proxy/.github/actions/composer-cache
+      - uses: run-as-root/magento-cli-auto-proxy/.github/actions/composer-cache@feature/actions-optimization
 
       - name: Install dependencies
         run: composer install --prefer-dist --no-progress
