@@ -50,7 +50,7 @@ composer req run_as_root/magento-cli-auto-proxy:^1
   - [ ] php linting
   - [ ] phpcs
   - [ ] phpmd
-  - [ ] phpstan
+  - [x] phpstan
 - [ ] Integration tests coverage
 - [ ] Pipelines tests automation
     - [ ] Static tests
