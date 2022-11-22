@@ -67,6 +67,26 @@ jobs:
       - name: PHP 8.1 compatibility
         run: composer sniffer:php8.1
 
+  Static-tests:
+    runs-on: ubuntu-latest
+
+    needs: build
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Cache Composer packages
+        id: composer-cache
+        uses: actions/cache@v3
+        with:
+          path: vendor
+          key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-php-
+
+      - name: phpstan
+        run: composer phpstan
+
   PHP-Unit:
     runs-on: ubuntu-latest
 
