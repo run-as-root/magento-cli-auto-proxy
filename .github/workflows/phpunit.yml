@@ -1,4 +1,4 @@
-name: PHP Unit
+name: Test Extension
 
 on:
   push:
@@ -16,6 +16,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+
+      - name: Validate composer.json and composer.lock
+        run: composer validate
 
       - name: Cache Composer packages
         id: composer-cache
@@ -35,6 +38,21 @@ jobs:
           php-version: '8.1'
           coverage: xdebug
 
+  PHP Compatibility:
+    needs: build
+    steps:
+      - name: PHP 7.4 compatibility
+        run: composer sniffer:php7.4
+
+      - name: PHP 8.0 compatibility
+        run: composer sniffer:php8.0
+
+      - name: PHP 8.1 compatibility
+        run: composer sniffer:php8.1
+
+  PHP Unit:
+    needs: build
+    steps:
       - name: PHP Unit
         run: composer phpunit
 
