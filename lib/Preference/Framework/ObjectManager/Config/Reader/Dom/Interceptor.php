@@ -22,8 +22,8 @@ class Interceptor extends OriginDom
      */
     private function runPlugin(array $result, ?string $scope): array
     {
-        /** @var EnrichCliConfigWithProxyPlugin $enrichService */
-        $enrichService = ObjectManager::getInstance()->get(EnrichCliConfigWithProxyPlugin::class);
-        return $enrichService->afterRead($this, $result, $scope);
+        /** @var EnrichCliConfigWithProxyPlugin $enrichPlugin */
+        $enrichPlugin = ObjectManager::getInstance()->get(EnrichCliConfigWithProxyPlugin::class);
+        return $enrichPlugin->afterRead($this, $result, $scope);
     }
 }

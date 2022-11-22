@@ -5,6 +5,7 @@ namespace RunAsRoot\CliConstructorArgAutoProxy\Plugin\Dom;
 
 use Psr\Log\LoggerInterface;
 use ReflectionException;
+use RunAsRoot\CliConstructorArgAutoProxy\Preference\Framework\ObjectManager\Config\Reader\Dom\Interceptor;
 use RunAsRoot\CliConstructorArgAutoProxy\Service\EnrichCliConfigWithProxyService;
 
 class EnrichCliConfigWithProxyPlugin
@@ -23,7 +24,7 @@ class EnrichCliConfigWithProxyPlugin
     /**
      * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
-    public function afterRead($subject, array $result, ?string $scope): array
+    public function afterRead(Interceptor $subject, array $result, ?string $scope): array
     {
         if ($scope !== 'global') {
             return $result;
