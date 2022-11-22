@@ -29,14 +29,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Cache Composer packages
-        id: composer-cache
-        uses: actions/cache@v3
+      - uses: ./.github/actions/composer-cache
         with:
-          path: vendor
-          key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-php-
+          runner-os:  ${{ runner.os }}
 
       - name: Install dependencies
         run: composer install --prefer-dist --no-progress
@@ -49,14 +44,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Cache Composer packages
-        id: composer-cache
-        uses: actions/cache@v3
+      - uses: ./.github/actions/composer-cache
         with:
-          path: vendor
-          key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-php-
+          runner-os: ${{ runner.os }}
 
       - name: PHP 7.4 compatibility
         run: composer sniffer:php7.4
@@ -75,14 +65,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Cache Composer packages
-        id: composer-cache
-        uses: actions/cache@v3
+      - uses: ./.github/actions/composer-cache
         with:
-          path: vendor
-          key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-php-
+          runner-os: ${{ runner.os }}
 
       - name: phpstan
         run: composer phpstan
@@ -95,14 +80,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Cache Composer packages
-        id: composer-cache
-        uses: actions/cache@v3
+      - uses: ./.github/actions/composer-cache
         with:
-          path: vendor
-          key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-php-
+          runner-os: ${{ runner.os }}
 
       - name: Setup PHP with Xdebug
         uses: shivammathur/setup-php@v2
