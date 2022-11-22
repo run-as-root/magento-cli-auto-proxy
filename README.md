@@ -54,7 +54,7 @@ composer req run_as_root/magento-cli-auto-proxy:^1
 - [ ] Integration tests coverage
 - [ ] Pipelines tests automation
     - [ ] Static tests
-    - [ ] Unit tests
+    - [x] Unit tests
     - [ ] Integration tests
     - [ ] Magento multiversions tests
 
