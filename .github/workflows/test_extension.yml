@@ -32,12 +32,6 @@ jobs:
       - name: Install dependencies
         run: composer install --prefer-dist --no-progress
 
-      - name: Setup PHP with Xdebug
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: '8.1'
-          coverage: xdebug
-
   PHP-Compatibility:
     runs-on: ubuntu-latest
 
@@ -72,14 +66,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Cache Composer packages
-        id: composer-cache
-        uses: actions/cache@v3
+      - name: Setup PHP with Xdebug
+        uses: shivammathur/setup-php@v2
         with:
-          path: vendor
-          key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-php-
+          php-version: '8.1'
+          coverage: xdebug
 
       - name: PHP Unit
         run: composer phpunit
