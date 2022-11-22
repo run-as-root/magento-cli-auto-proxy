@@ -43,3 +43,4 @@ jobs:
         with:
           push_badge: true
           commit_message: "Update coverage badge"
+          repo_token: ${{ secrets.VLAD_SECRET }}
