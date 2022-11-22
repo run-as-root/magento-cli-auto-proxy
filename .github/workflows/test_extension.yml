@@ -28,7 +28,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/composer-cache
+      - uses: .github/actions/composer-cache.yml
 
       - name: Install dependencies
         run: composer install --prefer-dist --no-progress
