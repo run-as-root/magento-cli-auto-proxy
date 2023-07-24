@@ -21,8 +21,8 @@
 ## About The Project
 
 ### Purpose:
+* eliminate issues while installation of your project with a fresh database (usually used with integration tests) - caused by not using Proxy in CLI of 3rd parties: `SQLSTATE[42S02]: Base table or view not found: 1146 Table 'magento2.flag' doesn't exist, query was: SELECT flag.* FROM flag WHERE (flag.flag_code='staging')`
 * speed up `php bin/magento` command execution;
-* eliminate `.flag table not found` issues while installation of your project with fresh database (usually used with integration tests) - caused by not using Proxy in CLI of 3rd parties.
 
 ## Getting Started
 
