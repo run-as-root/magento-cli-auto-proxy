@@ -27,7 +27,7 @@ final class ProxiedConstructArgsToDiConfigMapperTest extends TestCase
         $this->assertEquals($expected, $result);
     }
 
-    public function mapDataProvider(): array
+    public static function mapDataProvider(): array
     {
         return [
             'case1' => [
