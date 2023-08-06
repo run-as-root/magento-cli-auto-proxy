@@ -51,6 +51,9 @@ jobs:
       - name: PHP 8.1 compatibility
         run: composer sniffer:php8.1
 
+      - name: PHP 8.2 compatibility
+        run: composer sniffer:php8.2
+
   Static-tests:
     runs-on: ubuntu-latest
 
