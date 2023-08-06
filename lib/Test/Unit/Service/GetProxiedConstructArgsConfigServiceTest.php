@@ -31,7 +31,17 @@ final class GetProxiedConstructArgsConfigServiceTest extends TestCase
 
         $this->proxyValidator->expects($this->exactly(2))
             ->method('validate')
-            ->withConsecutive(['Some\Class'], ['Some\OtherClass'])
+            ->willReturnCallback(function () use (&$i) {
+                switch ($i) {
+                    case 0:
+                        return ['Some\Class'];
+                    case 1:
+                        return ['Some\OtherClass'];
+                }
+                $i++;
+
+                return [];
+            })
             ->willReturnOnConsecutiveCalls(true, false);
 
         $this->assertEquals(
@@ -56,7 +66,17 @@ final class GetProxiedConstructArgsConfigServiceTest extends TestCase
 
         $this->proxyValidator->expects($this->exactly(2))
             ->method('validate')
-            ->withConsecutive(['Some\Class'], ['Some\OtherClass'])
+            ->willReturnCallback(function () use (&$i) {
+                switch ($i) {
+                    case 0:
+                        return ['Some\Class'];
+                    case 1:
+                        return ['Some\OtherClass'];
+                }
+                $i++;
+
+                return [];
+            })
             ->willThrowException(new ClassIsNotEligibleForProxyException());
 
         $this->assertEquals([], $this->sut->get($constructConfig));
