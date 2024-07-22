@@ -3,6 +3,7 @@
 ![PHP](https://img.shields.io/badge/php-8.0-blue)
 ![PHP](https://img.shields.io/badge/php-8.1-blue)
 ![PHP](https://img.shields.io/badge/php-8.2-blue)
+![PHP](https://img.shields.io/badge/php-8.3-blue)
 ![composer](https://shields.io/badge/composer-v2-darkgreen)
 ![packagist](https://img.shields.io/badge/packagist-f28d1a)
 ![build](https://github.com/run-as-root/magento-cli-auto-proxy/actions/workflows/test_extension.yml/badge.svg)
