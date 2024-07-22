@@ -31,8 +31,8 @@
   "extra": {
     "map": [
       [
-        "component/app/etc/cli_arg_auto_proxy_di.xml",
-        "app/etc/cli_arg_auto_proxy_di.xml"
+        "component/app/etc/cli_arg_auto_proxy/di.xml",
+        "app/etc/cli_arg_auto_proxy/di.xml"
       ]
     ]
   },
